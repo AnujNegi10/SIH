@@ -10,7 +10,7 @@ from sklearn.ensemble import VotingClassifier
 from sklearn.metrics import accuracy_score
 
 # Load and preprocess data
-data = pd.read_csv(r'C:\Users\negia\OneDrive\Documents\data\trainDisaster.csv')
+data = pd.read_csv('.\trainDisaster.csv')
 data['text'] = data['text'].apply(preprocess_text)
 
 # Vectorize the text
