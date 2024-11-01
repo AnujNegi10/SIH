@@ -3,7 +3,7 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 
-nltk.download('stopwords')
+# nltk.download('stopwords')
 
 def preprocess_text(text):
     lemma = WordNetLemmatizer()
