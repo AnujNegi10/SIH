@@ -7,6 +7,9 @@ import spacy
 import re
 import numpy as np
 
+import nltk
+nltk.download('stopwords')
+nltk.download('wordnet')
 # Load model, vectorizer, PCA, and accuracy
 model, vectorizer, pca, acc = get_models()
 
