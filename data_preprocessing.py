@@ -4,6 +4,7 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 
 nltk.download('stopwords')
+nltk.download('wordnet')
 
 def preprocess_text(text):
     lemma = WordNetLemmatizer()
