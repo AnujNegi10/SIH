@@ -26,7 +26,14 @@ with open("ensemble_model.pkl", "rb") as model_file:
 vectorizer, pca, acc = get_models()
 
 # Initialize spaCy for NER
-nlp = spacy.load("en_core_web_sm")
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    # Download the model if it hasn't been installed
+    import spacy.cli
+    spacy.cli.download("en_core_web_sm")
+    nlp = spacy.load("en_core_web_sm")
+# nlp = spacy.load("en_core_web_sm")
 
 # Define disaster keywords
 DISASTER_KEYWORDS = {
