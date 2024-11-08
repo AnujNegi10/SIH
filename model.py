@@ -66,4 +66,4 @@ acc = accuracy_score(y_test,y_pred)
 
 # Save the vectorizer, PCA, and model as variables
 def get_models():
-    return  vectorizer, pca , acc
+    return  ensemble_model,vectorizer, pca , acc

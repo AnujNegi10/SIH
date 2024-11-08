@@ -13,8 +13,8 @@ import nltk
 nltk.download('stopwords')
 nltk.download('wordnet')
 
-with open("ensemble_model.pkl", "rb") as model_file:
-    model = pickle.load(model_file)
+# with open("ensemble_model.pkl", "rb") as model_file:
+#     model = pickle.load(model_file)
 
 # with open("vectorizer.pkl", "rb") as vec_file:
 #     vectorizer = pickle.load(vec_file)
@@ -23,7 +23,7 @@ with open("ensemble_model.pkl", "rb") as model_file:
 #     pca = pickle.load(pca_file)
 
 # Load model, vectorizer, PCA, and accuracy
-vectorizer, pca, acc = get_models()
+model ,vectorizer, pca, acc = get_models()
 
 # # Initialize spaCy for NER
 # try:
